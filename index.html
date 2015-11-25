@@ -52,9 +52,12 @@
 
             .main-header {
                 background-color: #111111;
-                font-size: 3em;
                 padding: 20px;
             }
+
+                .main-header h1 {
+                    font-size: 3em;
+                }
 
             .col {
                 width: 50%;
@@ -62,15 +65,30 @@
             }
 
             .col-header {
-                font-size: 1.5em;
                 margin: 20px 0;
                 padding: 10px;
                 border-left: 10px solid #FFFFFF;
             }
 
+                .col-header h2 {
+                    font-size: 1.5em;
+                }
+
             .image-view {
+                display: inline-block;
                 width: 40%;
+                text-align: center;
+                margin: 0 5%;
+                float: left;
             }
+
+                .image-view h3 {
+                    font-size: 1.2em;
+                }
+
+                .image-view img {
+                    width: 100%;
+                }
 
             .equation-editor {
                 width: 100%;
@@ -82,32 +100,45 @@
         </style>
     </head>
     <body>
-        <h1 class="main-header">Color-Fu!</h1>
+        <div class="main-header">
+            <h1>Color-Fu!</h1>
+        </div>
         <div id="images" class="col">
-            <h2 class="col-header">Images</h2>
-            <img id="input-image" src="jpl_square.jpg" class="image-view" />
-            <img id="output-image" class="image-view" />
+            <div class="col-header">
+                <h2>Images</h2>
+            </div>
+            <div class="image-view">
+                <h3>Initial Image</h3>
+                <img id="input-image" src="jpl_square.jpg" />
+            </div>
+            <div class="image-view">
+                <h3>Final image</h3>
+                <img id="output-image" />
+            </div>
         </div>
         <div id="equation-editors" class="col">
-            <h2 class="col-header">Equation Editor</h2>
+            <div class="col-header">
+                <h2>Equation Editor</h2>
+                <p>Press Ctrl-Enter (Windows) or Cmd-Enter (Mac) to run.</p>
+            </div>
             <div>
                 <code><span class="function">function</span> <span class="function-name">r</span>(<span class="function-argument">c</span>, <span class="function-argument">i</span>) {<code>
-                <div id="rf-editor" class="equation-editor"></div>
+                <div id="rf-editor" class="equation-editor">return c;</div>
                 <code>}<code>
             </div>
             <div>
                 <code><span class="function">function</span> <span class="function-name">g</span>(<span class="function-argument">c</span>, <span class="function-argument">i</span>) {<code>
-                <div id="gf-editor" class="equation-editor"></div>
+                <div id="gf-editor" class="equation-editor">return c;</div>
                 <code>}<code>
             </div>
             <div>
                 <code><span class="function">function</span> <span class="function-name">b</span>(<span class="function-argument">c</span>, <span class="function-argument">i</span>) {<code>
-                <div id="bf-editor" class="equation-editor"></div>
+                <div id="bf-editor" class="equation-editor">return c;</div>
                 <code>}<code>
             </div>
             <div>
                 <code><span class="function">function</span> <span class="function-name">a</span>(<span class="function-argument">c</span>, <span class="function-argument">i</span>) {<code>
-                <div id="af-editor" class="equation-editor"></div>
+                <div id="af-editor" class="equation-editor">return c;</div>
                 <code>}<code>
             </div>
         </div>
