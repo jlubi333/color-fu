@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Color-Fu!</title>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700' rel='stylesheet' type='text/css'>
+        <script src="lib/ace-src-min-noconflict/ace.js"></script>
+        <script src="main.js"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                -ms-box-sizing: border-box;
+                -o-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                font-weight: 100;
+                font-size: 1em;
+            }
+
+            body {
+                background-color: #222222;
+                color: #FFFFFF;
+                font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+                font-weight: 300;
+            }
+
+            code {
+                display: block;
+                font-family: "Monaco", "Menlo", 'Ubuntu Mono', "Consolas", "source-code-pro", monospace;
+                font-size: 14px;
+                font-weight: normal;
+                margin: 10px 0;
+            }
+
+            .function {
+                color: #B294BB;
+            }
+
+            .function-name {
+                color: #81A2BE;
+            }
+
+            .function-argument {
+                color: #DE935F;
+            }
+
+            .main-header {
+                background-color: #111111;
+                font-size: 3em;
+                padding: 20px;
+            }
+
+            .col {
+                width: 50%;
+                float: left;
+            }
+
+            .col-header {
+                font-size: 1.5em;
+                margin: 20px 0;
+                padding: 10px;
+                border-left: 10px solid #FFFFFF;
+            }
+
+            .image-view {
+                width: 40%;
+            }
+
+            .equation-editor {
+                width: 100%;
+                height: 3em;
+                font-size: 14px;
+                border-radius: 5px;
+                box-shadow: 1px 1px 3px 0 #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="main-header">Color-Fu!</h1>
+        <div id="images" class="col">
+            <h2 class="col-header">Images</h2>
+            <img id="input-image" src="jpl_square.jpg" class="image-view" />
+            <img id="output-image" class="image-view" />
+        </div>
+        <div id="equation-editors" class="col">
+            <h2 class="col-header">Equation Editor</h2>
+            <div>
+                <code><span class="function">function</span> <span class="function-name">r</span>(<span class="function-argument">c</span>, <span class="function-argument">i</span>) {<code>
+                <div id="rf-editor" class="equation-editor"></div>
+                <code>}<code>
+            </div>
+            <div>
+                <code><span class="function">function</span> <span class="function-name">g</span>(<span class="function-argument">c</span>, <span class="function-argument">i</span>) {<code>
+                <div id="gf-editor" class="equation-editor"></div>
+                <code>}<code>
+            </div>
+            <div>
+                <code><span class="function">function</span> <span class="function-name">b</span>(<span class="function-argument">c</span>, <span class="function-argument">i</span>) {<code>
+                <div id="bf-editor" class="equation-editor"></div>
+                <code>}<code>
+            </div>
+            <div>
+                <code><span class="function">function</span> <span class="function-name">a</span>(<span class="function-argument">c</span>, <span class="function-argument">i</span>) {<code>
+                <div id="af-editor" class="equation-editor"></div>
+                <code>}<code>
+            </div>
+        </div>
+    </body>
+</html>
